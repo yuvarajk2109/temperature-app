@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Checker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Temperature</h1>
+            <div class="link-group">
+                <a href="specific">Specific City</a>
+                <a href="all">All Cities</a>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <form action="/specific" method="POST" class="form">
+            <select name="city" required>
+                <option value="" disable select>Select City</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Pune">Pune</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Calcutta">Calcutta</option>
+            </select>
+            <button type="submit" class="submit-btn">Find</button>
+        </form>
+    </main>
+    <p style="{{ style }}">{{ message }}</p>
+</body>
+</html>
